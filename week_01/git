@@ -1,0 +1,4 @@
+# git add (choose changes to save)
+# git commit -m "finished week1" (save checkpoint locally) 
+# git push (upload these commits to github) 
+
