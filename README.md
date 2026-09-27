@@ -1,1 +1,0 @@
-# AWS Cloud Engineer Journey
