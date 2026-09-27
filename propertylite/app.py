@@ -49,3 +49,37 @@ def get_property(listing_id):
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080)
+
+
+"""
+CSV property data
+      ↓
+Python Flask app (python framework that allows python to become web server / API -> can respond when someone visits a URL) 
+    app = Flask(__name__) -> create a web application using Flask. 
+      ↓
+API endpoints
+    exposes 3 API endpoints: @app.route... 
+        http://localhost:8080/health -> if someone visits they get status ok, can ask AWS to use /health to ask -> Is this server still alive? 
+        if visit http://localhost:8080/properties -> reads csv and returns first 50 listings as JSON 
+        if @app.route("/properties/<listing_id>") -> can do /properties/R100234 -> L_ListingID == "R100234" returns property if dosen't exist returns HTTP 404 Not Found Error 
+        
+      ↓
+AWS infrastructure
+
+
+Flask
+= turns Python into a web/API application
+
+@app.route(...)
+= creates a URL endpoint
+
+request
+= receives information from the user/request
+
+jsonify()
+= sends JSON back
+
+app.run(...)
+= starts the server
+
+"""
